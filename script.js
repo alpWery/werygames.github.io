@@ -10,7 +10,7 @@ document.getElementById('supportForm').addEventListener('submit', function(e) {
     const message = document.getElementById('message').value;
     
     // Create mailto link
-    const mailtoLink = `mailto:support@werygames.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    const mailtoLink = `mailto:alp@wery.co?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nGame: ${game}\n\nMessage:\n${message}`
     )}`;
     

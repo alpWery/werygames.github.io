@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "Huemino",
+    "category": "Puzzle",
+    "description": "Looking for a relaxing yet challenging brain teaser? Welcome to Huemino!\n\nThe rule is simple: Connect the colored blocks based on the numbers provided. The number on each clue indicates exactly how many blocks that color needs to cover. Your goal is to fill the entire board without leaving any empty spaces!\n\nFeatures:\n- Hundreds of Levels: From 6x6 Easy grids up to complex 10x10 Extreme puzzles!\n- Perfect Difficulty Curve: Start easy and slowly challenge your logic skills.\n- Hint System: Stuck on a level? Use hints to find the right path.\n- Clean & Minimalist UI: Distraction-free, satisfying puzzle experience.\n- Offline Play: No Wi-Fi required. Play anywhere, anytime.\n\nSharpen your mind and enjoy hours of puzzle-solving fun. Download Huemino now and see if you can complete the Extreme levels!",
+    "link": "https://apps.apple.com/us/app/huemino-color-fill-puzzle/id6769375269",
+    "icon": "🎨",
+    "platform": "iOS"
+  }
+]

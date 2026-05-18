@@ -318,6 +318,87 @@ body {
     font-size: 1rem;
 }
 
+/* Privacy Policy Section */
+.privacy-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.privacy-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.privacy-section h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+
+.privacy-section h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+.privacy-section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.privacy-section ul {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.privacy-section ul li {
+    margin-bottom: 0.8rem;
+    color: #555;
+}
+
+.privacy-section a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.privacy-section a:hover {
+    text-decoration: underline;
+}
+
+.last-updated {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.contact-box {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #667eea;
+}
+
+.contact-box p {
+    margin: 0.5rem 0;
+}
+
+.footer-note {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e0e0e0;
+}
+
 /* Footer */
 .footer {
     background: #333;
@@ -328,6 +409,10 @@ body {
 
 .footer p {
     margin: 0.5rem 0;
+}
+
+.footer a {
+    color: white;
 }
 
 /* Responsive Design */
@@ -342,6 +427,7 @@ body {
 
     .nav-links {
         gap: 1rem;
+        font-size: 0.9rem;
     }
 
     .support-container {
@@ -350,7 +436,12 @@ body {
 
     .games h2,
     .about h2,
-    .support h2 {
+    .support h2,
+    .privacy-section h1 {
         font-size: 2rem;
+    }
+
+    .privacy-section h2 {
+        font-size: 1.5rem;
     }
 }

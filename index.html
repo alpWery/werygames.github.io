@@ -10,8 +10,16 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">🎮 Wery Games</div>
-            <ul class="nav-links">
+            <div class="logo">
+                <img src="assets/wery_games_logo.jpeg" alt="Wery Games" class="logo-img">
+                <span>Wery Games</span>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#games">Games</a></li>
                 <li><a href="#about">About</a></li>
@@ -26,7 +34,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Welcome to Wery Games</h1>
-                <p>Crafting extraordinary gaming experiences since 2024</p>
+                <p>Crafting extraordinary gaming experiences since 2022</p>
                 <a href="#games" class="btn btn-primary">Explore Our Games</a>
             </div>
         </div>
@@ -37,15 +45,31 @@
         <div class="container">
             <h2>Our Games</h2>
             <div class="games-grid">
-                <div class="game-card">
-                    <img src="assets/iknnn.png" alt="Huemino" class="game-image">
-                    <h3>Huemino</h3>
-                    <p>Connect colored blocks based on numbers and fill the entire board! From easy 6x6 grids to extreme 10x10 puzzles. Relax and sharpen your mind.</p>
-                    <a href="https://apps.apple.com/us/app/huemino-color-fill-puzzle/id6769375269" class="btn btn-secondary" target="_blank">
-                        <img src="assets/App_Store.png" alt="App Store" class="store-icon">
-                        Play Now
-                    </a>
+                <div class="game-card featured">
+                    <div class="game-image-wrapper">
+                        <img src="assets/iknnn.png" alt="Huemino" class="game-image">
+                    </div>
+                    <div class="game-card-content">
+                        <span class="featured-badge">⭐ Featured</span>
+                        <h3>Huemino</h3>
+                        <p class="game-subtitle">Color Fill Puzzle</p>
+                        <div class="game-features">
+                            <span>📱 iOS</span>
+                            <span>🎮 Puzzle</span>
+                            <span>🧩 Brain Game</span>
+                        </div>
+                        <p class="game-description">Connect colored blocks based on numbers and fill the entire board! From easy 6x6 grids to extreme 10x10 puzzles. Relax and sharpen your mind.</p>
+                        <a href="https://apps.apple.com/us/app/huemino-color-fill-puzzle/id6769375269" class="btn btn-secondary" target="_blank">
+                            <img src="assets/App_Store.png" alt="App Store" class="store-icon">
+                            Play Now
+                        </a>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="more-games">
+                <p>🎮 Discover all our games on the App Store</p>
+                <a href="https://apps.apple.com/sb/developer/wery-games-limited/id1644559204" class="btn btn-primary" target="_blank">View All Games</a>
             </div>
         </div>
     </section>
@@ -55,7 +79,7 @@
         <div class="container">
             <h2>About Wery Games</h2>
             <div class="about-content">
-                <p>We are a passionate team of game developers dedicated to creating engaging and innovative gaming experiences. Our mission is to bring joy and entertainment to gamers worldwide through carefully crafted games that challenge, inspire, and entertain.</p>
+                <p>We are a passionate team of game developers dedicated to creating engaging and innovative gaming experiences. Our mission is to bring joy and entertainment to gamers worldwide through carefully crafted, fun-filled games that stand out.</p>
                 <div class="values">
                     <div class="value-item">
                         <h3>Innovation</h3>
@@ -120,7 +144,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Wery Games. All rights reserved.</p>
+            <p>&copy; 2022-2026 Wery Games. All rights reserved.</p>
             <p><a href="privacy.html">Privacy Policy</a></p>
         </div>
     </footer>

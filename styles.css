@@ -34,8 +34,20 @@ body {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: white;
+    padding: 2px;
 }
 
 .nav-links {
@@ -52,6 +64,37 @@ body {
 
 .nav-links a:hover {
     opacity: 0.8;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* Hero Section */
@@ -127,18 +170,22 @@ body {
 
 .games-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 0 auto 3rem;
 }
 
 .game-card {
     background: white;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card.featured {
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
 }
 
 .game-card:hover {
@@ -146,31 +193,108 @@ body {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.game-image {
+.game-card.featured:hover {
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.3);
+}
+
+.game-image-wrapper {
+    position: relative;
     width: 100%;
-    height: 200px;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.game-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.game-card h3 {
-    padding: 1.5rem 1.5rem 0.5rem;
-    color: #333;
+.game-card-content {
+    padding: 1.5rem;
+    position: relative;
 }
 
-.game-card p {
-    padding: 0 1.5rem 1rem;
+.featured-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.game-card h3 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.game-subtitle {
+    color: #667eea;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.game-description {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.game-features {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.game-features span {
+    background: #f0f0f0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
     color: #666;
 }
 
 .game-card .btn {
-    margin: 0 1.5rem 1.5rem;
+    width: 100%;
+    padding: 0.85rem 1.5rem;
 }
 
 .store-icon {
     width: 20px;
     height: 20px;
     object-fit: contain;
+}
+
+.more-games {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.more-games p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.more-games .btn {
+    width: auto;
+    padding: 0.85rem 2rem;
 }
 
 /* About Section */
@@ -193,6 +317,7 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.8;
 }
 
 .values {
@@ -426,12 +551,34 @@ body {
     }
 
     .nav-links {
-        gap: 1rem;
-        font-size: 0.9rem;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        gap: 0;
+        padding: 1rem 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
-    .support-container {
-        grid-template-columns: 1fr;
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .games h2,
@@ -443,5 +590,106 @@ body {
 
     .privacy-section h2 {
         font-size: 1.5rem;
+    }
+
+    .support-container {
+        grid-template-columns: 1fr;
+    }
+
+    .games-grid {
+        max-width: 100%;
+    }
+
+    .game-card-content {
+        padding: 1.25rem;
+    }
+
+    .game-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .logo span {
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .more-games {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .navbar {
+        padding: 0.75rem 0;
+    }
+
+    .logo {
+        gap: 0.5rem;
+    }
+
+    .logo-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo span {
+        font-size: 1rem;
+    }
+
+    .games h2,
+    .about h2,
+    .support h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .game-card-content {
+        padding: 1rem;
+    }
+
+    .game-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .game-description {
+        font-size: 0.9rem;
+    }
+
+    .game-features {
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .values {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .value-item {
+        padding: 1.5rem;
+    }
+
+    .support-form {
+        padding: 1.5rem;
     }
 }

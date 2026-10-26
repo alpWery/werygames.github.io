@@ -1,9 +1,18 @@
 [
   {
     "id": 1,
+    "name": "Court Collector : Idle Clicker",
+    "category": "Idle Clicker",
+    "description": "Build your tennis legacy from the baseline to the grand slam. Tap to earn points, unlock upgrades, expand your racket empire, and dominate the courts in this exciting idle clicker adventure.",
+    "link": "https://apps.apple.com/us/app/court-collector-idle-clicker/id6821878642",
+    "icon": "App_Store.png",
+    "platform": "iOS"
+  },
+  {
+    "id": 2,
     "name": "Huemino",
     "category": "Puzzle",
-    "description": "Looking for a relaxing yet challenging brain teaser? Welcome to Huemino!\n\nThe rule is simple: Connect the colored blocks based on the numbers provided. The number on each clue indicates how many blocks you need to connect. Test your logic and problem-solving skills across multiple difficulty levels!",
+    "description": "Looking for a relaxing yet challenging brain teaser? Welcome to Huemino!\n\nThe rule is simple: Connect the colored blocks based on the numbers provided. The number on each clue indicates how many adjacent blocks need to be filled.",
     "link": "https://apps.apple.com/us/app/huemino-color-fill-puzzle/id6769375269",
     "icon": "iknnn.png",
     "platform": "iOS"
